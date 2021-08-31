@@ -1,0 +1,556 @@
+/* 
+    Portfolio Panda
+    Auther:Hossam Alahmed
+    -- Template version:1.0
+    -- Full Responsive
+    -- Sections:    - Navbar
+                    - Header
+                    - About
+                    - Skills
+                    - Services
+                    - Portfolio
+                    - Contact Me
+                    - Footer
+                    - Classes
+                    - Responsive
+    -- Font family: - Poppins / Light - Meduim - Bold
+    -- Colors:      - Main_color:#393939;
+                    - Second_color:#52e2a4;
+                    - Background_color:#242424;
+                    - Font_color:#ececec;
+                    - Btn_color:#3fb180;
+    -- Font size    - responsive
+
+
+    -- Follow Me
+                    - Github:https://github.com/Hossam-alahmad
+                    - Facebook:https://www.facebook.com/hossam.ahmad.1998/
+                    - Website:https://hossam-alahmad.github.io/Hossam-Alahmed.github.io/
+                    - Behance:https://www.behance.net/hossamahmad1998
+                    - Youtube:https://www.youtube.com/channel/UCBA-vbMA8nnk64V0ZaMv7Aw
+/* Start Import Poppins Fonts */
+@font-face {
+    font-family: 'Poppins-Bold';
+    src: url("../fonts/Poppins-Bold.ttf");
+}
+@font-face {
+    font-family: 'Poppins-Medium';
+    src: url("../fonts/Poppins-Medium.ttf");
+}
+@font-face {
+    font-family: 'Poppins-Light';
+    src: url("../fonts/Poppins-Light.ttf");
+}
+
+/* End Import Poppins Fonts */
+/* Start Variables */
+:root{
+    --main_color:#393939;
+    --second_color:#52e2a4;
+    --background_color:#242424;
+    --font_color:#ececec;
+    --btn_color:#3fb180;
+    /* font size */
+    --header_font:2.5rem;
+    --h2_font:2.2rem;
+    --h3_font:1.75rem;
+    --h4_font:1.5rem;
+    --nav_brand:1.58rem;
+    --paragraph_font:1rem;
+    --btn_font:1.2rem;
+    --icon_size:1.4rem;
+    
+}
+/* End Start Variables */
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    -webkit-box-sizing:border-box;
+    -moz-box-sizing:border-box;
+    font-family: 'Poppins-Medium';
+    
+}
+body{
+    scroll-behavior: smooth;
+    background-color:var(--background_color);
+}
+/* Start Navigation Bar */
+nav.navbar{
+    position: relative;
+    z-index:10000;
+    transition: all .3s ease-in-out;
+    padding:8px 0;
+}
+nav.navbar .container div.row{
+    width:100%;
+    padding:10px 0;
+    align-items:center;
+    
+}
+nav.navbar .container .row .menu-bar{
+    justify-content:flex-end;
+    display:none;
+}
+nav.navbar .container .row div.nav-brand a{
+    font-size:var(--nav_brand);
+}
+nav.navbar .container .row div:nth-of-type(3) ul{
+    display:flex;
+    justify-content:space-around;
+    margin:0;
+    align-items:center;
+}
+nav.navbar .container .row div:nth-of-type(3) ul li{
+    list-style:none;
+}
+nav.navbar .container .row div:nth-of-type(3) ul li a{
+    transition:color .2s ease-in-out;
+}
+
+nav.navbar .container .row div.nav-brand a,
+nav.navbar .container .row div ul li a{
+    text-decoration:none;
+    display:block;
+}
+/* End Navigation Bar */
+
+/* Start Header Section */
+.header .container .row{
+    align-items:center;
+}
+.header .container .row .content p{
+    width:75%;
+    line-height:1.7;
+}
+.header .container .row .content div button.contact{
+    position: relative;
+    font-size:var(--btn_font);
+    padding: 10px;
+    width: 40%;
+    border:none;
+    outline:none;
+    overflow: hidden;
+    
+}
+.header .container .row .content div button.contact:before{
+    content: "";
+    position: absolute;
+    top: -8px;
+    left: -35px;
+    width: 10%;
+    height: 140%;
+    transform: rotate(-30deg);
+    background-color: rgba(236,236,236,.5);
+    transition:all .2s ease-in-out;
+    
+}
+.header .container .row .content div button.contact:hover:before{
+    animation:rightHover .2s linear;
+}
+@keyframes rightHover{
+    0%{
+        left:-35%;
+    }
+    100%{
+        left:110%;
+    }
+}
+.header .container .row .content div button.show-video{
+    width:50px;
+    height:50px;
+    border-radius:50%;
+    margin-left:25px;
+    font-size:var(--btn_font);
+    cursor: pointer;
+}
+.header .container .row .content div button.show-video:focus{
+    box-shadow:none;
+}
+.header .container .row .img-box{
+    padding:50px;
+}
+.header .container .row .img-box img{
+    position: relative;
+    width:100%;
+    height:auto;
+}
+.header .container  .follow-box{
+    width:100%;
+    text-align:center;
+    margin-bottom:50px;
+}
+.header .container  .follow-box a{
+    font-size:var(--icon_size);
+    text-decoration:none;
+    transition:color .2s ease-in-out;
+}
+.header .container  .scroll-down{
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    position: relative;
+    margin:0 auto;
+    font-size:var(--nav_brand);
+}
+.header .container  .scroll-down i:first-child{
+    animation: scrollDown 1s linear infinite;
+}
+.header .container  .scroll-down i:last-child{
+    animation: scrollDown 1s .2s linear infinite;
+}
+.header .container .show-video-screen{
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(36,36,36,.85);
+    z-index: 100000;
+    visibility: hidden;
+    opacity:0;
+    transition:all .3s ease-in-out;
+}
+.header .container .show-video-screen video{
+    width:50%;
+}
+.header .container .show-video-screen .close-btn{
+    position: fixed;
+    top: 30px;
+    right: 30px;
+    font-size: 30px;
+    background: var(--btn_color);
+    width: 50px;
+    text-align: center;
+    border-radius: 5px;
+    cursor: pointer;
+}
+@keyframes scrollDown{
+    0%{
+        color:var(--font_color);
+    }
+    100%{
+        color: rgba(236,236,236,.5);
+    }
+}
+/* End Header Section */
+
+/* Start About Me Section */
+.about-me .container .row > div.img-container,
+.about-me .container .row > div.content{
+    left:0;
+    opacity:1;
+    transition:opacity .5s ease-in-out,left .3s ease-in-out;
+    
+}
+
+.about-me .container .row div .img-box{
+    border:1px solid var(--second_color);
+    max-height:400px;
+}
+.about-me .container .row div .img-box img{
+    position: relative;
+    top: -50px;
+    left: 50px;
+    width:100%;
+    max-height:400px;
+}
+.about-me .container .row div.content p{
+    line-height:1.7;
+}
+.about-me .container .row div.content .edu ul li{
+    list-style-position:inside;
+}
+/* End About me Section */
+
+/* Start Skills Section */
+
+.skills .container .skill-box{
+    position: relative;
+}
+.skills .container .skill-box > div:nth-child(odd){
+    display:flex;
+    justify-content: flex-end;
+}
+.skills .container .skill-box > div:nth-child(even){
+    display:flex;
+    justify-content: flex-start;
+    text-align: right;
+}
+.skills .container .skill-box div .skill-item{
+    position: relative;
+    padding:0 30px;
+    width:50%;
+}
+.skills .container .skill-box div .skill-item:before{
+    content:"";
+    position: absolute;
+    top:0;
+    width:20px;
+    height:20px;
+    border-radius:50%;
+    border:2px solid #707070;
+}
+.skills .container .skill-box div:not(:last-of-type) .skill-item:after{
+    content:"";
+    position: absolute;
+    top:0;
+    width: 4px;
+    height:100%;
+    z-index:-1;
+}
+.skills .container .skill-box div:nth-child(odd) .skill-item:before{
+    left:-8px;
+}
+.skills .container .skill-box div:nth-child(even) .skill-item:before{
+    right:-12px;
+}
+.skills .container .skill-box div:nth-child(odd) .skill-item:after{
+    left:0;
+}
+.skills .container .skill-box div:nth-child(even) .skill-item:after{
+    right:-4px;
+}
+/* End Skills Section */
+
+/* Start Service Section */
+
+.services .container .row{
+    text-align: center;
+}
+.services .container .row div .service-item{
+    border-radius:5px;
+    margin: 0 20px;
+    padding: 20px;
+    opacity:1;
+    transform:scale(1);
+    transition:all .5s ease-in-out;
+}
+.services .container .row div:nth-of-type(2) .service-item{
+    transform:scale(1.1);
+}
+.services .container .row div .service-item i{
+    font-size:var(--header_font);
+    margin-bottom:15px;
+}
+.services .container .row div .service-item h3{
+    font-size:var(--h3_font);
+}
+
+/* End Service Section */
+
+/* Start Portfolio Section */
+.portfolio .container .menu-list{
+    position: relative;
+    width:50%;
+    margin:0 auto;
+    margin-bottom:50px;
+}
+.portfolio .container .menu-list ul{
+    display:flex;
+    justify-content:space-around;
+}
+.portfolio .container .menu-list ul li{
+    list-style:none;
+    background: var(--main_color);
+    padding: 5px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.portfolio .container > .row > div  > .portfolio-item{
+    height:100%;
+    border-radius:5px;
+}
+.portfolio .container  .row div  .row div .portfolio-item{
+    height:200px;
+    max-height:200px;
+    border-radius:5px;
+
+}
+.portfolio .container  .row div  .row div:nth-child(1) .portfolio-item,
+.portfolio .container  .row div  .row div:nth-child(2) .portfolio-item{
+    margin-bottom:10px;
+}
+/* End Portfolio Section */
+
+/* Start Contact Me Section */
+.contact-me .container form .row div.col-lg-5 div{
+    margin-bottom:20px;
+}
+.contact-me .container form .row input{
+    border:none;
+    outline: none;
+    box-shadow:none;
+}
+.contact-me .container form .row div.col-lg-6 div{
+    height:100%;
+}
+.contact-me .container form .row div.col-lg-6 div textarea{
+    width:100%;
+    border:none;
+    outline:none;
+    padding:10px;
+}
+/* End Contact Me Section */
+
+/* End Footer Section */
+footer{
+    padding-top:50px;
+}
+footer .container header hr{
+    width:50%;
+    margin-bottom:50px;
+}
+footer .container .row .item h4{
+    font-size:var(--h4_font);
+}
+footer .container .row .item ul li{
+    list-style:none;
+    padding:5px 0;
+}
+footer .design-by{
+    text-align:center;
+    padding:10px;
+    background-color:var(--background_color);
+    margin-top:50px;
+}
+footer .design-by p{
+    margin:0;
+}
+/* End Footer Section */
+
+
+
+/* Start Classes  */
+
+.menu-list-active{
+    background-color:var(--btn_color) !important;
+}
+.active{
+    color:var(--second_color) !important;
+}
+.container{
+    justify-content: space-around !important;
+}
+.btn:focus{
+    box-shadow: 0 0 0 0.2rem rgb(82 226 164 / 25%) !important;
+}
+.img-animate-left{
+    left: -200px !important;
+    opacity: 0 !important;
+}
+.content-animate-right{
+    left: 200px !important;
+    opacity: 0 !important;
+}
+.animate-scale{
+    opacity:0 !important;
+    transform:scale(0) !important;
+}
+.nav-fixed{
+    position: fixed !important; 
+    width: 100%;
+    background: var(--background_color);
+    box-shadow: 0 0 5px var(--main_color);
+}
+/* End Classes  */
+
+/* Start short code */
+.header,
+.about-me,
+.skills,
+.services,
+.portfolio,
+.contact-me{
+    padding:50px 0;
+}
+.about-me .container header,
+.skills .container header,
+.services .container header,
+.portfolio .container header,
+.contact-me .container header{
+    text-align: center;
+    margin-bottom:100px;
+}
+.about-me .container header h1,
+.skills .container header h1,
+.services .container header h1,
+.portfolio .container header h1,
+.contact-me .container header h1,
+footer .container header h2{
+    font-size:var(--h2_font);
+}
+nav.navbar .container .row div.nav-brand a span,
+nav.navbar .container .row div:nth-of-type(3) ul li a:hover,
+.header .container .row .content h1 span,
+.header .container  .follow-box a:hover,
+.about-me .container .row div.content .edu h4,
+.skills .container .skill-box div .skill-item h6,
+.services .container .row div .service-item i,
+footer .container header h2 span,
+footer .design-by p span{
+    color:var(--second_color);
+}
+
+.skills .container .skill-box div .skill-item:before,
+.skills .container .skill-box div:not(:last-of-type) .skill-item:after,
+.services .container .row div .service-item,
+.portfolio .container > .row > div  > .portfolio-item,
+.portfolio .container  .row div  .row div .portfolio-item,
+.contact-me .container form .row input,
+.contact-me .container form .row div.col-lg-6 div textarea,
+footer{
+    background-color:var(--main_color);
+}
+
+
+nav.navbar .container .row div ul li a,
+.header .container .row .content p,
+.header .container .row .content div button.contact,
+.about-me .container .row div.content p,
+.about-me .container .row div.content .edu ul li,
+.skills .container .skill-box div .skill-item p,
+.services .container .row div .service-item p,
+.portfolio .container .menu-list ul li, 
+.contact-me .container form .row label,
+.contact-me .container form .row input,
+.contact-me .container form .row div.col-lg-6 div textarea,
+footer .container .row .item ul li,
+footer .container .row .item p,
+footer .design-by p{
+    font-size:var(--paragraph_font);
+}
+
+body,
+nav.navbar .container .row div.nav-brand a,
+nav.navbar .container .row div:nth-of-type(3) ul li a,
+.header .container .follow-box a,
+.header .container .row .content div button.contact,
+.contact-me .container form .row input,
+.contact-me .container form .row input[type=submit],
+.contact-me .container form .row div.col-lg-6 div textarea{
+    color:var(--font_color);
+}
+
+.header .container .row .content div button.show-video,
+footer .container header hr{
+    background-color:var(--font_color);
+}
+
+.header .container .row .content div button.contact,
+.contact-me .container form .row input[type=submit]{
+    background-color:var(--btn_color);
+    
+}
+/* End short code */
+
+.container{
+    max-width:1170px !important;
+}
+.show-screen{
+    opacity:1 !important;
+    visibility:visible !important;
+}

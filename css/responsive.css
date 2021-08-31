@@ -1,0 +1,187 @@
+@media (min-width:200px) and (max-width:767px) {
+    /*  Navbar ------------------------ */
+    .overlay{
+        position:fixed;
+        width:100%;
+        height:100%;
+        background-color:rgba(36,36,36,.5);
+        z-index: 1;
+        opacity:0;
+        visibility:hidden;
+        transition:all .3s ease-in-out;
+    }
+    .navbar .nav-brand{
+        margin-right:auto;
+    }
+    .navbar .menu-bar{
+        display:flex !important;
+    }
+    .navbar .menu-bar i{
+        padding:10px;
+        cursor: pointer;
+    }
+    
+    .navbar #menu-list{
+        position: fixed;
+        top: 73px;
+        background:var(--background_color);
+        left: -250px;
+        width:250px;
+        height:100%;
+        padding: 10px;
+        transition:all .3s ease-in-out;
+    }
+    .navbar #menu-list ul{
+        flex-direction:column;
+        align-items:flex-start;
+        justify-content:flex-start;
+    }
+    .navbar #menu-list ul li{
+        padding:10px;
+    }
+
+    .navbar #menu-list.show-menu{
+        left:0px;
+    }
+    .overlay-show{
+        opacity:1;
+       visibility: visible;
+    }
+    /*  Navbar ------------------------ */
+
+
+    /*  Header ------------------------ */
+    .header .container .row{
+        flex-direction:column-reverse;
+    }
+    .header .container .row .content{
+        margin-bottom:100px;
+    }
+    .header .container .show-video-screen video{
+        width:90%;
+    }
+    /*  Header ------------------------ */
+
+    /*  About ------------------------ */
+    .about-me .container .row div .img-box{
+        width:70%;
+        margin:0 auto;
+        margin-bottom:20px;
+    }
+    .about-me .container .row div .img-box img{
+        top:-20px;
+        left:20px;
+    }
+    .about-me .container .row div.content{
+        padding:20px;
+    }
+    /*  About ------------------------ */
+
+    /* services -----------------------*/
+    .services .services-box div .service-item{
+        transform:scale(1) !important;
+    }
+    .services .services-box div:not(:last-of-type) .service-item{
+        margin-bottom:50px;
+    }
+
+    /* services -----------------------*/
+
+    /* portfolio -----------------------*/
+
+    .portfolio .container .menu-list{
+        width:100%;
+    }
+    .portfolio .container .menu-list ul{
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+    .portfolio .container .menu-list ul li{
+        margin-bottom:10px;
+    }
+    .portfolio .container .row div:first-of-type .portfolio-item{
+        height:200px;
+        margin-bottom:10px;
+    }
+    .portfolio .container .row div .row div .portfolio-item{
+        margin-bottom:10px;
+    }
+    /* portfolio -----------------------*/
+
+    /* portfolio -----------------------*/
+    .contact-me .container .row{
+        flex-direction: column-reverse;
+    }
+    /* portfolio -----------------------*/
+
+
+    /* classes --------------- */
+    h1{
+        font-size: 2rem !important;;
+    }
+    h2{
+        font-size:1.5rem !important;;
+    }
+    h3{
+        font-size:1.3rem !important;;
+    }
+    h4{
+        font-size:1.2rem !important;;
+    }
+    h6{
+        font-size:1rem !important;;
+    }
+    p,li,li a,.btn,label,input{
+        font-size:14px !important;
+    }
+    /* classes --------------- */
+
+}
+@media (min-width:576px) and (max-width:767px){
+    /*  Header ------------------------ */
+    .header .container .row .img-box{
+        text-align: center;
+    }
+    .header .container .row .img-box img{
+        width:75%;
+    }
+    /*  Header ------------------------ */
+
+    /*  About ------------------------ */
+    .about-me .container .row div .img-box,
+    .about-me .container .row div .img-box img{
+        max-height:100%;
+    }
+    /*  About ------------------------ */
+
+
+
+    /* classes --------------- */
+    h1{
+        font-size: 2.2rem !important;;
+    }
+    h2{
+        font-size:1.7rem !important;;
+    }
+    h3{
+        font-size:1.5rem !important;;
+    }
+    h4{
+        font-size:1.35rem !important;;
+    }
+    h6{
+        font-size:1rem !important;;
+    }
+    p,li,li a,.btn,label,input{
+        font-size:16px !important;
+    }
+    /* classes --------------- */
+   
+}
+@media (min-width:768px) and (max-width:991px){
+    /*  Header ------------------------ */
+    .header .container .row .img-box{
+        padding:0;
+    }
+    /*  Header ------------------------ */
+}
