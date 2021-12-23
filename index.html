@@ -1,168 +1,315 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
     <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1" />
+        <meta charset="UTF-8" />
+        <meta name="description" content="Panda:Creative Portfolio" />
+        <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+        <meta
+            name="viewport"
+            content="width=device-width, initial-scale=1, minimum-scale=1"
+        />
         <title>Panda:Creative Portfolio</title>
-        <link rel="stylesheet" href="css/font-awesome.min.css">
-        <link rel="stylesheet" href="css/bootstrap.min.css">
-        <link rel="stylesheet" href="css/main.css">
-        <link rel="stylesheet" href="css/responsive.css">
+        <link rel="shortcut icon" href="images/icon.png" type="image/png" />
+        <link rel="stylesheet" href="css/font-awesome.min.css" media="all" />
+        <link rel="stylesheet" href="css/bootstrap.rtl.min.css" media="all" />
+        <link rel="stylesheet" href="css/style.css" media="all" />
     </head>
     <body>
+        <!-- Color Controls -->
+        <div class="controls">
+            <span class="icon" id="setting"
+                ><i class="fa fa-cog" aria-hidden="true"></i
+            ></span>
+            <ul class="colors-box" id="colors-box">
+                <li data-value="#3fb180"></li>
+                <li data-value="#dc3545"></li>
+                <li data-value="#20c997"></li>
+                <li data-value="#d63384"></li>
+                <li data-value="#6610f2"></li>
+                <li data-value="#6563ff"></li>
+                <li data-value="#fd7e14"></li>
+                <li data-value="#0dcaf0"></li>
+                <li data-value="#ff33e6"></li>
+                <li data-value="#ccff51"></li>
+            </ul>
+        </div>
+        <!-- Start header -->
         <div class="overlay" id="overlay"></div>
-        <nav class="navbar" id="navbar">
+        <header id="header">
             <div class="container">
-                <div class="row">
-                    <div class="nav-brand col-9 col-sm-5 col-md-4 col-lg-3">
-                        <a href="#" class="brand"><span>P</span>anda</a>
+                <div class="row w-100">
+                    <div
+                        class="
+                            nav-brand
+                            col-9 col-sm-5 col-md-4 col-lg-3
+                            offset-lg-2
+                        "
+                    >
+                        <a href="#" class="brand"
+                            ><svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                width="50"
+                                height="50"
+                                viewBox="0 0 60 60"
+                            >
+                                <path
+                                    id="panda"
+                                    d="M56.092,18.084a19.382,19.382,0,0,1,3.863,11.949q0,9.489-4.36,15.493a24.4,24.4,0,0,1-12.029,8.7,8.869,8.869,0,0,1-4.682,4.422,23.24,23.24,0,0,1-8.9,1.377,23.154,23.154,0,0,1-8.9-1.377,8.885,8.885,0,0,1-4.682-4.422,24.418,24.418,0,0,1-12.029-8.7q-4.362-6-4.36-15.492A19.382,19.382,0,0,1,3.884,18.084,10.7,10.7,0,0,1,.958,15.037,6.453,6.453,0,0,1,.9,8.39,15.628,15.628,0,0,1,7.162,2.562,19.069,19.069,0,0,1,12.693.307a9.37,9.37,0,0,1,4.888.175A6.238,6.238,0,0,1,21.15,3.44a9.952,9.952,0,0,1,1.288,4.686,48.932,48.932,0,0,1,15.1,0A9.952,9.952,0,0,1,38.826,3.44,6.369,6.369,0,0,1,42.4.453,8.97,8.97,0,0,1,47.283.278a19.818,19.818,0,0,1,5.531,2.284A15.848,15.848,0,0,1,59.107,8.39a6.327,6.327,0,0,1-.088,6.647,9.79,9.79,0,0,1-2.926,3.047ZM30.016,11.289a38.06,38.06,0,0,0-13.228,2.167,21.513,21.513,0,0,0-9.451,6.531,15.82,15.82,0,0,0-3.57,10.338q0,13.882,11.472,19.271a34.348,34.348,0,0,1-.234-4.569,12.844,12.844,0,0,0,5.151,8.083,15.93,15.93,0,0,0,9.833,3.163,15.93,15.93,0,0,0,9.833-3.163,12.844,12.844,0,0,0,5.151-8.083q0,2.87-.175,4.569,11.413-5.389,11.413-19.271a15.82,15.82,0,0,0-3.57-10.338,21.53,21.53,0,0,0-9.423-6.531,37.816,37.816,0,0,0-13.2-2.167ZM43.1,41.28a6.764,6.764,0,0,1-4.858-2.225,14.732,14.732,0,0,1-3.366-5.213,15.888,15.888,0,0,1-1.141-5.683,10.287,10.287,0,0,1,2.2-6.619,6.577,6.577,0,0,1,5.3-2.753q1.99,0,4.682,2.664a26.288,26.288,0,0,1,4.624,6.238,13.405,13.405,0,0,1,1.932,6.092A6.224,6.224,0,0,1,50.941,38a8.694,8.694,0,0,1-3.57,2.519,12.115,12.115,0,0,1-4.272.761ZM41.255,26.285a3.678,3.678,0,0,0-2.662,1.083,3.746,3.746,0,0,0,0,5.329,3.686,3.686,0,0,0,2.662,1.083,3.7,3.7,0,0,0,3.717-3.719A3.7,3.7,0,0,0,43.888,27.4a3.537,3.537,0,0,0-2.634-1.113ZM37.48,43.154q0,.878-3.014,3.25t-4.477,2.372q-1.463,0-4.477-2.4T22.5,43.153q0-1.172,1.99-1.522a33.545,33.545,0,0,1,5.5-.352,33.053,33.053,0,0,1,5.5.352q1.99.354,1.99,1.522Zm-20.6-1.875a12.165,12.165,0,0,1-4.272-.761A8.673,8.673,0,0,1,9.035,38a6.228,6.228,0,0,1-1.521-4.217,13.4,13.4,0,0,1,1.932-6.092,26.333,26.333,0,0,1,4.624-6.238q2.692-2.666,4.682-2.664a6.574,6.574,0,0,1,5.3,2.753,10.3,10.3,0,0,1,2.2,6.619A15.936,15.936,0,0,1,25.1,33.843a14.7,14.7,0,0,1-3.366,5.213,6.768,6.768,0,0,1-4.858,2.225Zm1.9-14.994a3.678,3.678,0,0,0-2.662,1.083,3.746,3.746,0,0,0,0,5.329,3.686,3.686,0,0,0,2.662,1.083,3.7,3.7,0,0,0,3.717-3.719A3.7,3.7,0,0,0,21.412,27.4a3.537,3.537,0,0,0-2.634-1.113Z"
+                                    transform="translate(-0.007 -0.023)"
+                                />
+                            </svg>
+                        </a>
                     </div>
                     <div class="menu-bar col-2 col-sm-2">
-                        <i class="fa fa-bars" aria-hidden="true"  id="menu-bar"></i>
+                        <i
+                            class="fa fa-bars"
+                            aria-hidden="true"
+                            id="menu-bar"
+                        ></i>
                     </div>
-                    <div class="offset-lg-2 col-md-8 col-lg-7" id="menu-list">
-                        <ul class="menu-list" id="menu-list">
-                            <li><a id="home" href="#" class="active item">Home</a></li>
-                            <li><a id="about" href="#" class="item">About</a></li>
-                            <li><a id="skills" href="#" class="item">Skills</a></li>
-                            <li><a id="services" href="#" class="item">Services</a></li>
-                            <li><a id="portfolio" href="#" class="item">Portfolio</a></li>
-                            <li><a id="contact-me" href="#" class="item">Contact Me</a></li>
+                    <nav class="col-md-8 col-lg-7 nav-bar" id="nav-bar">
+                        <span>Sections:</span>
+                        <ul id="nav-list">
+                            <li>
+                                <a href="#" class="active item">Home</a>
+                            </li>
+                            <li>
+                                <a href="#about" class="item">About</a>
+                            </li>
+                            <li>
+                                <a href="#skills" class="item">Skills</a>
+                            </li>
+                            <li>
+                                <a href="#services" class="item">Services</a>
+                            </li>
+                            <li>
+                                <a href="#portfolio" class="item">Portfolio</a>
+                            </li>
+                            <li>
+                                <a href="#contact" class="item">Contact Me</a>
+                            </li>
                         </ul>
-                    </div>
+                        <span>Follow Me:</span>
+                        <ul>
+                            <li>
+                                <a href="#" class="item">Facebook</a>
+                            </li>
+                            <li>
+                                <a href="#" class="item">Linked In</a>
+                            </li>
+                            <li>
+                                <a href="#" class="item">Github</a>
+                            </li>
+                        </ul>
+                    </nav>
                 </div>
             </div>
-        </nav>
-        <div class="header">
+        </header>
+        <!-- End header -->
+        <!-- Start landing -->
+        <div class="landing padding-section">
             <div class="container">
                 <div class="row">
-                    <div class="col-md-6 content">
+                    <div class="col-md-7 col-lg-6 content offset-lg-1">
                         <h1><span>Panda</span>:Creative Portfolio</h1>
                         <p>
-                            panda is responsive portfolio 
-                            and very easy to use for your 
-                            business, its come with amazing 
-                            color and simple design Ui/Ux
+                            panda is responsive portfolio and very easy to use
+                            for your business, its come with amazing color and
+                            simple design Ui/Ux
                         </p>
                         <div>
-                            <button class="btn contact">Contact Me</button>
-                            <button class="btn show-video" id="btn-video"><i class="fa fa-play" aria-hidden="true"></i></button>
+                            <button class="btn contact" aria-label="contact">
+                                Contact Me
+                            </button>
+                            <button
+                                class="btn show-video"
+                                aria-label="show-video"
+                                id="btn-video"
+                            >
+                                <i class="fa fa-play" aria-hidden="true"></i>
+                            </button>
                         </div>
                     </div>
-                    <div class="offset-lg-1 col-md-5 img-box">
-                        <img class="img-responsive" src="images/Group 36.png">
+                    <div class="col-md-5 img-box">
+                        <img
+                            class="img-responsive"
+                            src="images/Group 36.png"
+                            alt="user-image"
+                            width="400"
+                            height="400"
+                        />
                     </div>
                 </div>
-                <div class="follow-box">
-                    <a href="#">
+                <div class="follow-box text-center">
+                    <a href="#" target="_blank">
                         <i class="fa fa-github" aria-hidden="true"></i>
                     </a>
-                    <a href="#">
+                    <a href="#" target="_blank">
                         <i class="fa fa-behance-square" aria-hidden="true"></i>
                     </a>
-                    <a href="#">
+                    <a href="#" target="_blank">
                         <i class="fa fa-linkedin-square" aria-hidden="true"></i>
                     </a>
-                    
                 </div>
-                <div class="scroll-down">
+                <div class="scroll-down text-center">
                     <i class="fa fa-chevron-down" aria-hidden="true"></i>
                     <i class="fa fa-chevron-down" aria-hidden="true"></i>
                 </div>
-                <div class="show-video-screen">
+                <div class="show-video-screen" id="video-screen">
                     <div class="close-btn" id="close-btn">
                         <i class="fa fa-times" aria-hidden="true"></i>
                     </div>
-                    <video controls>
-                        <source>
+                    <video controls poster="" preload="none" id="video">
+                        <source src="" />
                         Not support your browser
                     </video>
                 </div>
             </div>
         </div>
-        <div class="about-me">
+        <!-- End landing -->
+        <!-- Start about me -->
+        <div class="about-me padding-section" id="about">
             <div class="container">
-                <header>
+                <div class="title text-center">
                     <h2>About Me</h2>
-                </header>
+                    <p>Lorem ipsum dolor sit amet</p>
+                </div>
                 <div class="row">
-                    <div class="col-md-4 img-animate-left img-container" id="img-container">
+                    <div
+                        class="
+                            col-md-4
+                            img-animate-left img-container
+                            offset-md-1 offset-lg-2
+                        "
+                        id="img-container"
+                    >
                         <div class="img-box">
-                            <img class="img-responsive" src="images/Group 48.png">
+                            <img
+                                loading="lazy"
+                                class="img-responsive"
+                                src="images/Group 48.png"
+                                alt="user-img"
+                                width="400"
+                                height="400"
+                            />
                         </div>
                     </div>
-                    <div class="offset-md-1 offset-lg-2 col-md-7 col-lg-6 content content-animate-right" id="content">
+                    <div
+                        class="col-md-7 col-lg-6 content content-animate-right"
+                        id="content"
+                    >
                         <p>
-                            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Porro necessitatibus sapiente sint commodi dolores atque odit error, tenetur quisquam itaque, voluptatibus est quis? Suscipit nisi enim labore, amet tempore assumenda.
-                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempora inventore delectus architecto iure quae sunt sed animi, nisi eaque mollitia consequatur enim, quam eos doloremque, incidunt reiciendis necessitatibus expedita explicabo!
+                            Lorem, ipsum dolor sit amet consectetur adipisicing
+                            elit. Porro necessitatibus sapiente sint commodi
+                            dolores atque odit error, tenetur quisquam itaque,
+                            voluptatibus est quis? Suscipit nisi enim labore,
+                            amet tempore assumenda. Lorem ipsum dolor sit amet,
+                            consectetur adipisicing elit. Tempora inventore
+                            delectus architecto iure quae sunt sed animi, nisi
+                            eaque mollitia consequatur enim, quam eos
+                            doloremque, incidunt reiciendis necessitatibus
+                            expedita explicabo!
                         </p>
                         <div class="edu">
-                            <h4>Education:</h4>
+                            <h3 class="h4">Education:</h3>
                             <ul>
-                                <li>Lorem, ipsum dolor sit amet consectetur adipisicing elit.</li>
-                                <li>Lorem, ipsum dolor sit amet consectetur adipisicing elit.</li>
+                                <li>
+                                    Lorem, ipsum dolor sit amet consectetur
+                                    adipisicing elit.
+                                </li>
+                                <li>
+                                    Lorem, ipsum dolor sit amet consectetur
+                                    adipisicing elit.
+                                </li>
                             </ul>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-        <div class="skills">
+        <!-- End about me-->
+        <!-- Start skills -->
+        <div class="skills padding-section" id="skills">
             <div class="container">
-                <header>
+                <div class="title text-center">
                     <h2>Skills</h2>
-                </header>
+                    <p>Lorem ipsum dolor sit amet</p>
+                </div>
                 <div class="row skill-box">
                     <div class="col-lg-12">
                         <div class="skill-item">
-                            <h6>TITLE</h6>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                            <h3 class="h5">TITLE</h3>
+                            <p>
+                                Lorem ipsum dolor sit amet consectetur
+                                adipisicing elit.
+                            </p>
                         </div>
                     </div>
                     <div class="col-lg-12">
                         <div class="skill-item">
-                            <h6>TITLE</h6>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                            <h3 class="h5">TITLE</h3>
+                            <p>
+                                Lorem ipsum dolor sit amet consectetur
+                                adipisicing elit.
+                            </p>
                         </div>
                     </div>
                     <div class="col-lg-12">
                         <div class="skill-item">
-                            <h6>TITLE</h6>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                            <h3 class="h5">TITLE</h3>
+                            <p>
+                                Lorem ipsum dolor sit amet consectetur
+                                adipisicing elit.
+                            </p>
                         </div>
                     </div>
                     <div class="col-lg-12">
                         <div class="skill-item">
-                            <h6>TITLE</h6>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                            <h3 class="h5">TITLE</h3>
+                            <p>
+                                Lorem ipsum dolor sit amet consectetur
+                                adipisicing elit.
+                            </p>
                         </div>
                     </div>
                     <div class="col-lg-12">
                         <div class="skill-item">
-                            <h6>TITLE</h6>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                            <h3 class="h5">TITLE</h3>
+                            <p>
+                                Lorem ipsum dolor sit amet consectetur
+                                adipisicing elit.
+                            </p>
                         </div>
                     </div>
                     <div class="col-lg-12">
                         <div class="skill-item">
-                            <h6>TITLE</h6>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                            <h3 class="h5">TITLE</h3>
+                            <p>
+                                Lorem ipsum dolor sit amet consectetur
+                                adipisicing elit.
+                            </p>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-        <div class="services">
+        <!-- End skills-->
+        <!-- Start services -->
+        <div class="services padding-section" id="services">
             <div class="container">
-                <header>
+                <div class="title text-center">
                     <h2>Services</h2>
-                </header>
-                <div class="row services-box">
+                    <p>Lorem ipsum dolor sit amet</p>
+                </div>
+                <div class="row services-box text-center">
                     <div class="col-md-4">
                         <div class="service-item animate-scale">
                             <i class="fa fa-paint-brush" aria-hidden="true"></i>
                             <h3>Title</h3>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                            <p>
+                                Lorem ipsum dolor sit amet consectetur
+                                adipisicing elit.
+                            </p>
                             <p>+150 Project</p>
                         </div>
                     </div>
@@ -170,7 +317,10 @@
                         <div class="service-item animate-scale">
                             <i class="fa fa-code" aria-hidden="true"></i>
                             <h3>Title</h3>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                            <p>
+                                Lorem ipsum dolor sit amet consectetur
+                                adipisicing elit.
+                            </p>
                             <p>+150 Project</p>
                         </div>
                     </div>
@@ -178,101 +328,225 @@
                         <div class="service-item animate-scale">
                             <i class="fa fa-file-code-o" aria-hidden="true"></i>
                             <h3>Title</h3>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                            <p>
+                                Lorem ipsum dolor sit amet consectetur
+                                adipisicing elit.
+                            </p>
                             <p>+150 Project</p>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-        <div class="portfolio">
+        <!-- End services-->
+        <!-- Start portfolios -->
+        <div class="portfolio padding-section" id="portfolio">
             <div class="container">
-                <header>
+                <div class="title text-center">
                     <h2>Portfolio</h2>
-                </header>
-                <div class="menu-list">
+                    <p>Lorem ipsum dolor sit amet</p>
+                </div>
+                <div class="portfolio-types text-center">
                     <ul>
-                        <li class="menu-list-active">All</li>
+                        <li class="active-type">All</li>
                         <li>UI/UX</li>
                         <li>Websites</li>
                         <li>Dashboards</li>
                     </ul>
                 </div>
-                <div class="row">
-                    <div class="col-12 col-md-4 col-lg-4">
+                <div class="row portfolio-box">
+                    <div
+                        class="col-sm-6 col-md-4 show-portfolios"
+                        data-text="UI/UX"
+                    >
                         <div class="portfolio-item">
-                            
+                            <div class="portfolio-overlay"></div>
+                            <a class="btn" href="#" target="_blank"
+                                >Show Demo</a
+                            >
+                            <img
+                                src="images/placeholder-400.png"
+                                alt="portfolio1.png"
+                                loading="lazy"
+                                width="400"
+                                height="400"
+                            />
                         </div>
                     </div>
-                    <div class="col-12 col-md-8 col-lg-8">
-                        <div class="row">
-                            <div class="col-md-6" data-text="Ui/Ux">
-                                <div class="portfolio-item">
-        
-                                </div>
-                            </div>
-                            <div class="col-md-6" data-text="Ui/Ux">
-                                <div class="portfolio-item">
-        
-                                </div>
-                            </div>
-                            <div class="col-md-6" data-text="Dashboards">
-                                <div class="portfolio-item">
-        
-                                </div>
-                            </div>
-                            <div class="col-md-6" data-text="Websites">
-                                <div class="portfolio-item">
-        
-                                </div>
-                            </div>
+                    <div
+                        class="col-sm-6 col-md-4 show-portfolios"
+                        data-text="UI/UX"
+                    >
+                        <div class="portfolio-item">
+                            <div class="portfolio-overlay"></div>
+                            <a class="btn" href="#" target="_blank"
+                                >Show Demo</a
+                            >
+                            <img
+                                src="images/placeholder-400.png"
+                                alt="portfolio2.png"
+                                loading="lazy"
+                                width="400"
+                                height="400"
+                            />
+                        </div>
+                    </div>
+                    <div
+                        class="col-sm-6 col-md-4 show-portfolios"
+                        data-text="Dashboards"
+                    >
+                        <div class="portfolio-item">
+                            <div class="portfolio-overlay"></div>
+                            <a class="btn" href="#" target="_blank"
+                                >Show Demo</a
+                            >
+                            <img
+                                src="images/placeholder-400.png"
+                                alt="portfolio3.png"
+                                loading="lazy"
+                                width="400"
+                                height="400"
+                            />
+                        </div>
+                    </div>
+                    <div
+                        class="col-sm-6 col-md-4 show-portfolios"
+                        data-text="Websites"
+                    >
+                        <div class="portfolio-item">
+                            <div class="portfolio-overlay"></div>
+                            <a class="btn" href="#" target="_blank"
+                                >Show Demo</a
+                            >
+                            <img
+                                src="images/placeholder-400.png"
+                                alt="portfolio4.png"
+                                loading="lazy"
+                                width="400"
+                                height="400"
+                            />
+                        </div>
+                    </div>
+                    <div
+                        class="col-sm-6 col-md-4 show-portfolios"
+                        data-text="UI/UX"
+                    >
+                        <div class="portfolio-item">
+                            <div class="portfolio-overlay"></div>
+                            <a class="btn" href="#" target="_blank"
+                                >Show Demo</a
+                            >
+                            <img
+                                src="images/placeholder-400.png"
+                                alt="portfolio5.png"
+                                loading="lazy"
+                                width="400"
+                                height="400"
+                            />
+                        </div>
+                    </div>
+                    <div
+                        class="col-sm-6 col-md-4 show-portfolios"
+                        data-text="Dashboards"
+                    >
+                        <div class="portfolio-item">
+                            <div class="portfolio-overlay"></div>
+                            <a class="btn" href="#" target="_blank"
+                                >Show Demo</a
+                            >
+                            <img
+                                src="images/placeholder-400.png"
+                                alt="portfolio6.png"
+                                loading="lazy"
+                                width="400"
+                                height="400"
+                            />
                         </div>
                     </div>
                 </div>
+                <div class="see-more text-center">
+                    <a href="#" class="btn">See More </a>
+                </div>
             </div>
         </div>
-        <div class="contact-me">
+        <!-- End portfolios-->
+        <!-- Start contact-me-->
+        <div class="contact-me padding-section" id="contact">
             <div class="container">
-                <header>
+                <div class="title text-center">
                     <h2>Contact Me</h2>
-                </header>
+                    <p>Lorem ipsum dolor sit amet</p>
+                </div>
                 <form>
                     <div class="row">
-                        <div class="col-md-5 col-lg-5">
+                        <div class="col-md-5 col-lg-5 offset-md-1">
                             <div class="username">
                                 <label for="username">Username:</label>
-                                <input class="form-control" type="text" name="username">
+                                <input
+                                    class="form-control"
+                                    type="text"
+                                    name="username"
+                                    id="username"
+                                />
                             </div>
                             <div class="email">
                                 <label for="email">Email:</label>
-                                <input class="form-control" type="email" name="email">
+                                <input
+                                    class="form-control"
+                                    type="email"
+                                    name="email"
+                                    id="email"
+                                />
                             </div>
                             <div class="subject">
                                 <label for="subject">Subject:</label>
-                                <input class="form-control" type="text" name="subject">
+                                <input
+                                    class="form-control"
+                                    type="text"
+                                    name="subject"
+                                    id="subject"
+                                />
                             </div>
-                            <input type="submit" class="form-control btn btn-block" name="submit" value="Send">
+                            <input
+                                type="submit"
+                                class="form-control btn btn-block"
+                                name="submit"
+                                value="Send"
+                            />
                         </div>
-                        <div class="offset-md-1 col-md-6 col-lg-6">
+                        <div class="col-md-6 col-lg-6">
                             <div class="description">
                                 <label for="description">Description:</label>
-                                <textarea name="description" rows="10"></textarea>
+                                <textarea
+                                    class="form-control"
+                                    name="description"
+                                    rows="10"
+                                    id="description"
+                                ></textarea>
                             </div>
+                            <input
+                                type="submit"
+                                class="form-control btn btn-block hidden"
+                                name="submit2"
+                                value="Send"
+                            />
                         </div>
                     </div>
                 </form>
             </div>
         </div>
+        <!-- End contact-me-->
+        <!-- Start footer-->
         <footer>
             <div class="container">
-                <header>
+                <div>
                     <h2><span>Panda</span>:Creative Portfolio</h2>
-                    <hr>
-                </header>
+                    <hr />
+                </div>
                 <div class="row">
                     <div class="col-sm-6 col-md-4">
                         <div class="item">
-                            <h4>Section:</h4>
+                            <h3 class="h4">Section:</h3>
                             <ul>
                                 <li>Title1</li>
                                 <li>Title2</li>
@@ -283,7 +557,7 @@
                     </div>
                     <div class="col-sm-6 col-md-4">
                         <div class="item">
-                            <h4>Section:</h4>
+                            <h3 class="h4">Section:</h3>
                             <ul>
                                 <li>Title1</li>
                                 <li>Title2</li>
@@ -294,20 +568,27 @@
                     </div>
                     <div class="col-sm-6 col-md-4">
                         <div class="item">
-                            <h4>Section:</h4>
-                            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Doloremque officia pariatur vero autem, esse, illum sequi quibusdam explicabo iusto tempore dolorem excepturi. Sed perferendis eligendi libero doloremque ad minus exercitationem!</p>
+                            <h3 class="h4">Section:</h3>
+                            <p>
+                                Lorem ipsum dolor sit, amet consectetur
+                                adipisicing elit. Doloremque officia pariatur
+                                vero autem, esse, illum sequi quibusdam
+                                explicabo iusto tempore dolorem excepturi. Sed
+                                perferendis eligendi libero doloremque ad minus
+                                exercitationem!
+                            </p>
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="design-by">
-                <p>Design With Love By <span>Hossam Alahmed</span></p>
+            <div class="design-by text-center">
+                <p>
+                    All right reseved &copy; 2021 to <span>Hossam Alahmed</span>
+                </p>
             </div>
         </footer>
-        <script src="js/jquery-3.4.1.min.js"></script>
-        <script src="js/popper.min.js"></script>
-        <script src="js/bootstrap.min.js"></script> 
-        <script src="js/swiper.min.js"></script>
-        <script src="js/main.js"></script>
+        <!-- End footer-->
+
+        <script src="js/main.js" defer async></script>
     </body>
 </html>
